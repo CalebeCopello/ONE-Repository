@@ -12,6 +12,3 @@ Convergent: learns solving problems
 Assimilation: learns by observing and taking notes
 
 The best way to learn is to pass through all these process.
-
-My result as a learner:
-![Convergent learner](blob:null/9a726c15-27dc-41df-bfdd-c33fc952196e)
