@@ -26,12 +26,28 @@
 		/>
 	</head>
 	<body>
-        <main>
-            <div class="main-text-container">
-                <h1>Digite seu texto</h1>
-                <textarea name="" id="" cols="60" rows="30"></textarea>
-            </div>
-        </main>
-    </body>
-    <script src="script.js"></script>
+		<main>
+			<div class="main-text-input-container">
+				<div class="text-input">
+					<textarea
+						name=""
+						id=""
+						cols="60"
+						rows="30"
+						placeholder="Digite seu texto"
+					></textarea>
+				</div>
+				<div class="menu-container">
+					<div class="menu-text-container">
+						<img src="./assets/icons/warning.png" alt="icone de alerta">
+						<span class="menu-warning"
+							>Apenas letras minúsculas e sem acento.</span
+						>
+					</div>
+				</div>
+			</div>
+			<div class="main-text-decoded-container"></div>
+		</main>
+	</body>
+	<script src="script.js"></script>
 </html>
