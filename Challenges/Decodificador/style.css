@@ -280,3 +280,10 @@ main {
 	background-color: var(--gray2);
 	color: var(--bg3);
 }
+
+textarea { 
+    border: none;
+}
+textarea:focus { 
+    outline: none;
+}
