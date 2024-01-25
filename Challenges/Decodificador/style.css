@@ -99,6 +99,8 @@
 	--orange1: #af3a03;
 
 	font-family: Onest;
+
+	--light-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 @font-face {
@@ -117,71 +119,164 @@
 }
 
 body {
-	background-color: var(--bg0_h);
+	background-color: var(--bg2);
 	display: flex;
 }
 main {
-	border: 1px dashed red;
-	margin: 5rem auto;
-	height: 80vh;
+	/* border: 1px dashed red; */
+	margin: 3rem auto;
+	height: 50rem;
 	width: 80%;
 	padding: 1rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-content: center;
 }
 .main-text-input-container {
-	padding: 1rem;
-	border: 1px solid green;
-	width: 65%;
+	/* padding: 1rem; */
+	/* border: 1px solid green; */
+	width: 50%;
+	margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 .text-input {
-	height: 80%;
-	border: 1px solid green;
-	padding: 1rem;
+	height: 43rem;
+	/* border: 1px solid green; */
+	display: flex;
+	justify-content: center;
+}
+.text-input > textarea {
+	width: 100%;
+	height: 42rem;
+	font-family: Onest;
+	font-size: 2rem;
+	resize: none;
 }
 .menu-container {
-	border: 1px solid yellow;
-	padding: 1rem;
+	/* border: 1px solid yellow; */
+	/* padding: 1rem; */
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 .menu-text-container {
-	border: 1px solid magenta;
+	/* border: 1px solid magenta; */
 	padding: 1rem;
+    display: flex;
 }
 .menu-text-container > img {
-	border: 1px solid orange;
+	/* border: 1px solid orange; */
+    height: 1rem;
 }
 .menu-warning {
-	border: 1px solid red;
-	padding: 1rem;
+	/* border: 1px solid red; */
+	/* padding: 1rem; */
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
 }
 .menu-buttons-container {
-	border: 1px solid green;
+	/* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.menu-buttons-container > button {
+    width: 45%;
+    height: 3rem;
 }
 .main-text-decoded-container {
-	border: 1px solid blue;
-	width: 30%;
+    /* border: 1px solid green; */
+	background-color: var(--bg0_h);
+	border-radius: 2rem;
+	box-shadow: var(--light-shadow);
+	width: 28%;
+    height: 52rem;
+    margin-top: -1rem;
 }
 .text-decoded-null-container {
-	border: 1px solid green;
+	/* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
 }
 .text-decoded-null-img {
-	border: 1px solid magenta;
+	margin: 10rem 0 3rem 0;
+	/* border: 1px solid magenta; */
+	display: flex;
+	justify-content: center;
 }
 .text-decoded-null-img > img {
-    width: 20rem;
+	width: 90%;
+    max-width: 20rem;
+    border: 3px solid var(--fg0);
+    border-radius: 50%;
+    box-shadow: var(--light-shadow);
 }
 .text-decoded-null-text-container {
-    border: 1px solid red;
+	/* border: 1px solid red; */
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 7rem;
+    justify-content: space-between;
 }
-.text-decoded-null-text-title{
-    border: 1px solid yellow;
+.text-decoded-null-text-title {
+    /* display: flex; */
+    align-self: center;
+    text-align: center;
+	/* border: 1px solid yellow; */
+    font-size: 1.5rem;
 }
 .text-decoded-null-text-subtext {
-    border: 1px solid blue;
+    align-self: center;
+    text-align: center;
+	/* border: 1px solid blue; */
 }
 /* tablet screen */
 @media screen and (max-width: 768px) {
+	main {
+		flex-direction: column;
+		background-color: yellow;
+	}
 }
 /* cellphone screen */
 @media screen and (max-width: 375px) {
+	main {
+		flex-direction: column;
+	}
+}
+
+
+/* UI */
+
+.ccBtn {
+	padding: 0.5rem;
+	background-color: var(--bg0);
+	border: 2px solid var(--fg0);
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+	border-radius: 0.5rem;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+    font-family: JetBrainsMono;
+}
+.ccBtn:hover:not(:disabled) {
+	background-color: var(--orange0);
+}
+.ccBtn:active:not(:disabled) {
+	background-color: var(--orange1);
+	box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+	position: relative;
+	transform: scale(0.9, 0.9);
+	transition: transform 0.1s;
+}
+.ccBtn:disabled,
+.ccBtn[disabled] {
+	cursor: default;
+	border: 2px solid var(--gray0);
+	background-color: var(--gray2);
+	color: var(--bg3);
 }
