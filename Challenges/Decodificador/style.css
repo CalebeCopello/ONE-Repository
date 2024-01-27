@@ -123,7 +123,7 @@ body {
 	display: flex;
 }
 main {
-	border: 1px dashed red;
+	/* border: 1px dashed red; */
 	margin: 3rem auto;
 	height: 50rem;
 	width: 80%;
@@ -137,9 +137,9 @@ main {
 	/* border: 1px solid green; */
 	width: 50%;
 	margin-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
 }
 .text-input {
 	height: 43rem;
@@ -151,55 +151,55 @@ main {
 	width: 100%;
 	height: 42rem;
 	font-family: Onest;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	resize: none;
 }
 .menu-container {
 	/* border: 1px solid yellow; */
 	/* padding: 1rem; */
-    width: 100%;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
+	width: 100%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
 }
 .menu-text-container {
 	/* border: 1px solid magenta; */
-	padding: 1rem;
-    display: flex;
+	padding: 0.3rem;
+	display: flex;
 }
 .menu-text-container > img {
 	/* border: 1px solid orange; */
-    height: 1rem;
+	height: 1rem;
 }
 .menu-warning {
 	/* border: 1px solid red; */
 	/* padding: 1rem; */
-    font-size: 0.8rem;
-    margin-left: 0.5rem;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
 }
 .menu-buttons-container {
 	/* border: 1px solid green; */
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 .menu-buttons-container > button {
-    width: 45%;
-    height: 3rem;
+	width: 45%;
+	height: 3rem;
 }
 .main-text-decoded-container {
-    /* border: 1px solid green; */
+	/* border: 1px solid green; */
 	background-color: var(--bg0_h);
 	border-radius: 2rem;
 	box-shadow: var(--light-shadow);
 	width: 28%;
-    height: 52rem;
-    margin-top: -1rem;
+	height: 52rem;
+	margin-top: -1rem;
 }
 .text-decoded-null-container {
 	/* border: 1px solid green; */
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .text-decoded-null-img {
 	margin: 10rem 0 3rem 0;
@@ -209,29 +209,29 @@ main {
 }
 .text-decoded-null-img > img {
 	width: 90%;
-    max-width: 20rem;
-    border: 3px solid var(--fg0);
-    border-radius: 50%;
-    box-shadow: var(--light-shadow);
+	max-width: 20rem;
+	border: 3px solid var(--fg0);
+	border-radius: 50%;
+	box-shadow: var(--light-shadow);
 }
 .text-decoded-null-text-container {
 	/* border: 1px solid red; */
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    height: 7rem;
-    justify-content: space-between;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	height: 7rem;
+	justify-content: space-between;
 }
 .text-decoded-null-text-title {
-    /* display: flex; */
-    align-self: center;
-    text-align: center;
+	/* display: flex; */
+	align-self: center;
+	text-align: center;
 	/* border: 1px solid yellow; */
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 .text-decoded-null-text-subtext {
-    align-self: center;
-    text-align: center;
+	align-self: center;
+	text-align: center;
 	/* border: 1px solid blue; */
 }
 
@@ -247,7 +247,7 @@ main {
 	text-decoration: none;
 	cursor: pointer;
 	transition: all 0.2s ease-in;
-    font-family: JetBrainsMono;
+	font-family: JetBrainsMono;
 }
 .ccBtn:hover:not(:disabled) {
 	background-color: var(--orange0);
@@ -267,25 +267,41 @@ main {
 	color: var(--fg2);
 }
 
-textarea { 
-    border: none;
+textarea {
+	border: none;
 }
-textarea:focus { 
-    outline: none;
+textarea:focus {
+	outline: none;
 }
 
 /* tablet screen */
 @media screen and (max-width: 768px) {
-    body {
-        background-color: #458588;
-        height: 100rem;
-    }
 	main {
+		height: 50rem;
 		flex-direction: column;
 	}
-    .text-decoded-null-img > img {
-        display: none;
-    }
+	.main-text-input-container {
+		width: 100%;
+		margin: 0;
+	}
+	.text-input {
+		height: 35rem;
+	}
+	.text-input > textarea {
+		height: 34rem;
+	}
+	.text-decoded-null-img {
+		display: none;
+	}
+	.main-text-decoded-container {
+		width: 100%;
+		height: 7rem;
+		margin-top: 3rem;
+	}
+	.text-decoded-null-text-container {
+		margin-top: 1rem;
+		height: 4rem;
+	}
 }
 /* cellphone screen */
 @media screen and (max-width: 375px) {
