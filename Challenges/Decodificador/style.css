@@ -149,10 +149,11 @@ main {
 }
 .text-input > textarea {
 	width: 100%;
-	height: 42rem;
+	height: 40rem;
 	font-family: Onest;
 	font-size: 1.5rem;
 	resize: none;
+	background-color: var(--bg0_h);
 }
 .menu-container {
 	/* border: 1px solid yellow; */
@@ -195,6 +196,13 @@ main {
 	width: 28%;
 	height: 52rem;
 	margin-top: -1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+.main-text-decoded-container > button {
+	align-self: center;
 }
 .text-decoded-null-container {
 	/* border: 1px solid green; */
@@ -233,6 +241,18 @@ main {
 	align-self: center;
 	text-align: center;
 	/* border: 1px solid blue; */
+	font-size: 1rem;
+}
+.text-decoded-container {
+	/* border: 1px solid red; */
+	margin: 1rem 1rem;
+	height: 42rem;
+	overflow: auto;
+	padding: 1rem;
+	display: none;
+}
+.copyButton {
+	display: none;
 }
 
 /* UI */
@@ -248,6 +268,7 @@ main {
 	cursor: pointer;
 	transition: all 0.2s ease-in;
 	font-family: JetBrainsMono;
+	max-width: 10rem;
 }
 .ccBtn:hover:not(:disabled) {
 	background-color: var(--orange0);
@@ -269,6 +290,8 @@ main {
 
 textarea {
 	border: none;
+	border-radius: 0.5rem;
+	padding: 1rem;
 }
 textarea:focus {
 	outline: none;
@@ -288,7 +311,7 @@ textarea:focus {
 		height: 35rem;
 	}
 	.text-input > textarea {
-		height: 34rem;
+		height: 32rem;
 	}
 	.text-decoded-null-img {
 		display: none;
@@ -302,10 +325,20 @@ textarea:focus {
 		margin-top: 1rem;
 		height: 4rem;
 	}
+	.text-decoded-null-text-title {
+		font-size: 1rem;
+	}
+	.text-decoded-null-text-subtext {
+		font-size: 0.7rem;
+	}
 }
 /* cellphone screen */
 @media screen and (max-width: 375px) {
 	main {
 		flex-direction: column;
+	}
+	.ccBtn {
+		padding: 0.1rem;
+		font-size: 0.7rem;
 	}
 }

@@ -31,7 +31,7 @@
 				<div class="text-input">
 					<textarea
 						name=""
-						id=""
+						id="textToCrypt"
 						placeholder="Digite seu texto"
 					></textarea>
 				</div>
@@ -46,13 +46,40 @@
 						>
 					</div>
 					<div class="menu-buttons-container">
-						<button type="submit" class="ccBtn">Criptografar</button>
-						<button type="submit" class="ccBtn" disabled>Descriptografar</button>
+						<button
+							type="submit"
+							class="ccBtn"
+							id="cryptButton"
+						>
+							Criptografar
+						</button>
+						<button
+							type="submit"
+							class="ccBtn"
+							id="decryptButton"
+						>
+							Descriptografar
+						</button>
 					</div>
 				</div>
 			</div>
-			<div class="main-text-decoded-container">
-				<div class="text-decoded-null-container">
+			<div
+				class="main-text-decoded-container"
+				id="mainDecodedContainer"
+			>
+				<div class="text-decoded-container" id="textDecodedContainer"></div>
+				<button
+					type="submit"
+					class="ccBtn copyButton"
+					id="copyCryptButton"
+				>
+					Copiar
+				</button>
+				
+				<div
+					class="text-decoded-null-container"
+					id="decodedNullContainer"
+				>
 					<div class="text-decoded-null-img">
 						<img
 							src="./imgs/detective-1424831_640.png"
